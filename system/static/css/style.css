@@ -1,0 +1,22 @@
+* {
+    color: #141E46;
+}
+
+body {
+    background-color: #F8F0E5;
+}
+.flex {
+    margin: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.table {
+    margin-top: 20px;
+    outline-style: groove;
+    outline-width: 10px;
+    outline-color: #DAC0A3;
+}
+
+a {
+    color:#4942E4;
+}

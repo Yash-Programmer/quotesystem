@@ -1,0 +1,18 @@
+<!-- quotes.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quotes Page</title>
+</head>
+<body>
+    <h1>Quotes by {{quote_author}}</h1>
+    <ul>
+        {% for quote in quote_list %}
+        <li>
+            <p>{{ quote }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

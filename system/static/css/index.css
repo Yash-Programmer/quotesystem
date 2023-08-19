@@ -1,0 +1,25 @@
+body {background-color: #F8F0E5;}
+
+.table {
+    width: 50%;
+}
+
+.table thead tr th a {
+    text-decoration: none;
+    color: #606C5D; 
+
+}
+.table thead tr th {
+    text-align: center;
+}
+.table thead tr th:hover{
+    background-color: #bdd4b8;
+    
+}
+
+center {
+    background-color: #d1e7dd;
+    outline-style: solid;
+    outline-color: #606C5D;
+    outline-width: 5px;
+}
