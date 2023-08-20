@@ -119,7 +119,6 @@ def persona(request):
 
     base_url = "https://www.azquotes.com"
     url = f"{base_url}/author/{query}"
-    author_name = get_author(url)
 
     num_pages = 5
     with multiprocessing.Pool() as pool:
@@ -132,3 +131,36 @@ def persona(request):
     quote_list = list(set(quote_list))
     quote_author = get_author(url)
     return render(request, 'persona.html', {'quote_list': quote_list, 'quote_author': quote_author})  
+
+def search(request):
+    # quote_list = []
+    
+    # query = request.GET.get('query', 'none')
+    # url = "https://www.azquotes.com/search_results.html?query=" + query
+    # url = url.replace(' ', '+')
+    # # print(url)
+    # # response = requests.get(url).text
+    # # soup = BeautifulSoup(response, 'html.parser')
+    # from lxml import etree
+
+    # url = "https://www.azquotes.com/search_results.html?query=CristianoRonaldo"
+
+    # response = requests.get(url)
+    # if response.status_code == 200:
+    #     tree = html.fromstring(response.content)
+    #     href = tree.xpath('//*[@id="___gcse_0"]//div[@class="gs-title"]/a/@href')
+        
+    # if element == []:
+    #     num_pages = 5
+    #     with multiprocessing.Pool() as pool:
+    #         fetch_quotes_partial = partial(fetch_quotes_page, url)
+    #         results = pool.map(fetch_quotes_partial, range(1, num_pages + 1))
+
+    #     for quotes in results:
+    #         quote_list.extend(quotes)
+
+    #     quote_list = list(set(quote_list))
+    #     print(quote_list)
+    #     quote_author = get_author(url)
+    return render(request, 'search.html') 
+

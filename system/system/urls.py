@@ -24,4 +24,5 @@ urlpatterns = [
     path('', index, name="home"),
     path('authors', author_page, name='authors'),
     path('persona', persona, name='persona'),
+    path('search', search, name='search'),
 ]

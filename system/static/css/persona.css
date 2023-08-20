@@ -29,18 +29,15 @@ body {background-color: #F8F0E5;}
 .flex-container {
     display: flex;
 }
-.flex-item  {
-    outline: #DAC0A3 solid 5px;
-}
 .one {
     width: 70%;
     margin: 25px;
-    background-color: #EADBC8;
 }
 .two {
     width: 30%;
     margin: 25px;
     background-color: #EADBC8;
+    outline: #DAC0A3 solid 5px;
 }
 .quote {
     width: 95%;
@@ -63,7 +60,7 @@ body {background-color: #F8F0E5;}
   h2 {
     font-family: 'Satisfy', cursive;
   }
-  h3.quote {
+ .quote {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   }
 img {
