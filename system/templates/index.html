@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% block title %}Home{% endblock title %}
 {% block head %}
 
 <link rel="stylesheet" href="{% static './css/index.css' %}">
@@ -23,7 +23,7 @@
         <center>
             <h1><u>Quote of the Day</h1></u> <br>
             <div class="img-container">
-                <img height="400px" src="https://source.unsplash.com/random/1600x900/?nature,dark" alt="">
+                <img height="450px" src="https://source.unsplash.com/random/800x450/?nature,dark" alt="">
                 <h2 class="centered">{{quote}}</h2>
             </div>
             <br><br>

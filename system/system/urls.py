@@ -18,6 +18,9 @@ from django.contrib import admin
 from django.urls import path
 from authors.views import *
 from home.views import *
+from search.views import *
+from chatbot.views import *
+from contact.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,4 +28,7 @@ urlpatterns = [
     path('authors', author_page, name='authors'),
     path('persona', persona, name='persona'),
     path('search', search, name='search'),
+    path('chatbot', chatbot, name='chatbot'),
+    path('contact', contact, name='contact'),
+    path('sent', sent, name='sent'),   
 ]

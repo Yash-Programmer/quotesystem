@@ -1,18 +1,59 @@
-<!-- quotes.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Quotes Page</title>
-</head>
-<body>
-    <h1>Quotes by {{quote_author}}</h1>
-    <ul>
-        {% for quote in quote_list %}
-        <li>
-            <p>{{ quote }}</p>
-        </li>
-        {% endfor %}
-    </ul>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Personality{% endblock title %}
+{% block head %}
+
+<link rel="stylesheet" href="{% static './css/persona.css' %}">
+{% endblock head %}
+{% block body %}
+
+    <br><u><center><h1>Quotes by {{quote_author}}</h1></center></u>
+    <div class="flex-container">
+        <div class="flex-item one">
+            
+            {% for quote in quote_list %}
+                <br><br>
+                    <h3>{{quote}}</h3>
+                    <br><hr>
+                {% endfor %}
+        </div>
+        <div class="flex-item two">
+            <center>
+                <h1><u>Personality</u></h1>
+            </center>
+            <br>
+            <div class="text-center">
+                <img id="persona-img" src="{{img}}"><br><br><br>
+                <b><u><h2>{{quote_author}}</h2></u></b>
+            </div>
+            <br><hr>
+            <center>
+                <h1><u>Other</u></h1>
+            </center>
+            <ul>
+                <li>
+                    <a href="persona?query=15121-Swami_Vivekananda">Swami Vivekananda</a>
+                </li>
+                <li>
+                    <a href="persona?query=8044-Martin_Luther_King_Jr">Martin Luther King Jr.</a>
+                </li>
+                <li>
+                    <a href="persona?query=9365-Nelson_Mandela">Nelson Mandela</a>
+                </li>
+                <li>
+                    <a href="persona?query=14414-Rabindranath_Tagore">Rabindranath Tagore</a>
+                </li>
+                <li>
+                    <a href="persona?query=7703-Abdul_Kalam">A.P.J. Abdul Kalam</a>
+                </li>
+            </ul>
+            <br>
+            <center>
+                <div>
+                    <u><b> Made with ❤️ in India </b></u>
+                </div>
+            </center>
+        </div>
+    </div>    
+
+{% endblock body %}

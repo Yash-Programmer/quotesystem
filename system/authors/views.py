@@ -43,6 +43,14 @@ author_list = []
 context = {}
 popular_author = {}
 
+def img(innovator):
+    url = f"https://www.bing.com/images/search?q={innovator}"
+    xpath_expression = '//*[@id="mmComponent_images_2"]/ul[1]/li[1]/div/div[1]/a/div/img/@src'
+
+    response = requests.get(url)
+    tree = html.fromstring(response.content)
+    image_src = tree.xpath(xpath_expression)
+    return image_src[0]
 
 def author(letter, page):
     author_list = []
@@ -114,6 +122,7 @@ def fetch_quotes_page(url, page_num):
         quotes = quotes_page(f"{url}?p={page_num}")
         return quotes
 def persona(request):
+    
     query = request.GET.get('query', "none")
     quote_list = []
 
@@ -132,7 +141,7 @@ def persona(request):
     quote_author = get_author(url)
     return render(request, 'persona.html', {'quote_list': quote_list, 'quote_author': quote_author})  
 
-def search(request):
+# def search(request):
     # quote_list = []
     
     # query = request.GET.get('query', 'none')
@@ -162,5 +171,5 @@ def search(request):
     #     quote_list = list(set(quote_list))
     #     print(quote_list)
     #     quote_author = get_author(url)
-    return render(request, 'search.html') 
+    # return render(request, 'search.html') 
 
